@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import { Nunito } from "next/font/google";
 
-const main_font = Noto_Sans({ subsets: ["latin"] });
+const main_font = Nunito({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Intelbras Access Manager",
+  title: "Gerenciador Intelbras",
 };
 
 export default function RootLayout({
@@ -24,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="w-full h-20 bg-primary"></div>
           <main className="flex min-h-screen max-w-5xl mx-auto flex-col p-8">
             <Header />
             {children}

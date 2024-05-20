@@ -6,9 +6,9 @@ import { ToastContainer } from "react-toastify";
 export default function Home() {
   return (
     <section className="flex flex-col items-start justify-start gap-6 py-6">
-      {/* <CreateUser /> */}
+      <CreateUser />
       <ShowTime />
-      {/* <ListUsers /> */}
+      <ListUsers />
       <ToastContainer />
     </section>
   );

@@ -26,7 +26,7 @@ export default function ListUsers() {
 
   const [users, setUsers] = useState<User[]>([]);
   const url =
-    "http://192.168.1.65/cgi-bin/recordFinder.cgi?action=find&name=AccessControlCard&condition.count=1024";
+    "http://192.168.1.54/cgi-bin/recordFinder.cgi?action=find&name=AccessControlCard&condition.count=1024";
   const getUsers = async () => {
     const response = await digestAuth.request({
       headers: { Accept: "application/json" },
